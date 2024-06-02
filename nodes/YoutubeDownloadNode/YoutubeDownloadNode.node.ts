@@ -60,12 +60,14 @@ export class YoutubeDownloadNode implements INodeType {
 					dumpSingleJson: true,
 					noCheckCertificates: true,
 					noWarnings: true,
+					format: "bv+ba/b",
 					addHeader: ['referer:youtube.com', 'user-agent:googlebot'],
 				});
 
 				await YoutubeDL.exec(url, {
 					noCheckCertificates: true,
 					noWarnings: true,
+					format: "bv+ba/b",
 					addHeader: ['referer:youtube.com', 'user-agent:googlebot'],
 					output: '/home/node/.n8n/%(id)s.mp4',
 				});
