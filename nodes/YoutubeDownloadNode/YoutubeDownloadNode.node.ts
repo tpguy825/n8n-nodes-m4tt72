@@ -67,10 +67,10 @@ export class YoutubeDownloadNode implements INodeType {
 					noCheckCertificates: true,
 					noWarnings: true,
 					addHeader: ['referer:youtube.com', 'user-agent:googlebot'],
-					output: '/home/node/.n8n/%(id)s.%(ext)s',
+					output: '/home/node/.n8n/%(id)s.mp4',
 				});
 
-				const filePath = `/home/node/.n8n/${metadata.id}.${metadata.ext}`;
+				const filePath = `/home/node/.n8n/${metadata.id}.mp4`;
 
 				let data: Buffer;
 
